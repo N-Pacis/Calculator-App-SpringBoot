@@ -1,4 +1,4 @@
-package rw.rca.calculatorapp.integration;
+package rw.rca.calculatorapp.e2e;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
