@@ -1,10 +1,7 @@
 package rw.rca.calculatorapp.controller;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import rw.rca.calculatorapp.dto.DoMathRequest;
 import rw.rca.calculatorapp.exception.InvalidOperationException;
 import rw.rca.calculatorapp.payload.ApiResponse;
@@ -18,6 +15,11 @@ public class MathController {
 
     public MathController(IMathService mathService) {
         this.mathService = mathService;
+    }
+
+    @GetMapping
+    public ResponseEntity<ApiResponse> testing(){
+        return ResponseEntity.ok(ApiResponse.success("success"));
     }
 
     @PostMapping
